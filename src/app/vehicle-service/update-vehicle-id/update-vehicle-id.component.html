@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Update Vehicle By ID</h3>
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> <b><b>Vehicle ID </b> </b></label>
+              <input type="text" class="form-control" id="vehicleId" [(ngModel)]="vehicle.vehicleId"
+                     name="vehicleId" readonly >
+            </div>
+
+            <div class="form-group">
+              <label> <b>Type </b></label>
+              <input type="text" class="form-control" id="vehicleType" [(ngModel)]="vehicle.vehicleType"
+                     name="vehicleType">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Number  </b></label>
+              <input type="text" class="form-control" id="vehicleNumber" [(ngModel)]="vehicle.vehicleNumber"
+                     name="vehicleNumber" bg-color="lightgray">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Model  </b></label>
+              <input type="text" class="form-control" id="vehicleModel" [(ngModel)]="vehicle.vehicleModel"
+                     name="vehicleModel">
+            </div>
+
+  
+            <div class="form-group">
+              <label> <b>Seat Capacity  </b></label>
+              <input type="text" class="form-control" id="vehicleSeatCapacity" [(ngModel)]="vehicle.vehicleSeatCapacity"
+                     name="vehicleSeatCapacity">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Fuel Type  </b></label>
+              <input type="text" class="form-control" id="vehicleFuelType" [(ngModel)]="vehicle.vehicleFuelType"
+                     name="vehicleFuelType">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Ac Type  </b></label>
+              <input type="text" class="form-control" id="vehicleAcType" [(ngModel)]="vehicle.vehicleAcType"
+                     name="vehicleAcType">
+            </div>
+
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

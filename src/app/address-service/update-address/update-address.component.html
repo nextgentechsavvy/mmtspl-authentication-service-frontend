@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h5 class="text-center"> Update Address Search </h5>
+        <hr />
+
+<div class="card-body">
+         <!--  <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> ID </label>
+              <input type="text" class="form-control" id="addressId" [(ngModel)]="address.addressId"
+                     name="addressId">
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form> -->
+
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By ID</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="addressIdVal" [(ngModel)]="addressIdVal" 
+                name="addressIdVal" >
+              </td>
+              <td>
+                <button (click) = "updateAddressSearchById(addressIdVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By City</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="addressCityVal" [(ngModel)]="addressCityVal"  
+                name="addressCityVal">
+              </td>
+              <td>
+                <button (click) = "updateAddressSearchByCity(addressCityVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <h5> Address Details</h5>
+  </div>
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th> Addr ID</th>
+      <th> Emp ID</th>
+      <th> Locality </th>
+      <th> City </th>
+      <th> State </th>
+      <th> Country </th>
+      <th> Zip </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let address of addresss" >
+      <td> {{ address.addressId }} </td>
+      <td> {{ address?.employeeId! }} </td>
+      <td> {{ address?.locality! }} </td>
+      <td> {{ address?.city! }} </td>
+      <td> {{ address?.state! }} </td>
+      <td> {{ address?.country! }} </td>
+      <td> {{ address?.zipcode! }} </td>
+      <td>
+        <button (click) = "updateAddressById(address?.addressId!)" class = "btn btn-primary"> Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Create Vehicle </h3>
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label>Type </label>
+              <input type="text" class="form-control" id="vehicleType" [(ngModel)]="vehicle.vehicleType"
+                     name="vehicleType">
+            </div>
+  
+            <div class="form-group">
+              <label>Number </label>
+              <input type="text" class="form-control" id="vehicleNumber" [(ngModel)]="vehicle.vehicleNumber"
+                     name="vehicleNumber">
+            </div>
+  
+            <div class="form-group">
+              <label> Model </label>
+              <input type="text" class="form-control" id="vehicleModel" [(ngModel)]="vehicle.vehicleModel"
+                     name="vehicleModel">
+            </div>
+  
+            <div class="form-group">
+              <label> Seat Capacity </label>
+              <input type="text" class="form-control" id="vehicleSeatCapacity" [(ngModel)]="vehicle.vehicleSeatCapacity"
+                     name="vehicleSeatCapacity">
+            </div>
+  
+            <div class="form-group">
+              <label> Fuel Type </label>
+              <input type="text" class="form-control" id="vehicleFuelType" [(ngModel)]="vehicle.vehicleFuelType"
+                     name="vehicleFuelType">
+            </div>
+  
+            <div class="form-group">
+              <label> Ac Type </label>
+              <input type="text" class="form-control" id="vehicleAcType" [(ngModel)]="vehicle.vehicleAcType"
+                     name="vehicleAcType">
+            </div>
+
+
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

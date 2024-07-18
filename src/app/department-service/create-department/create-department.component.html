@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Create Department </h3>
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> Name</label>
+              <input type="text" class="form-control" id="departmentName" [(ngModel)]="department.departmentName"
+                     name="departmentName">
+            </div>
+  
+            <div class="form-group">
+              <label> Location</label>
+              <input type="text" class="form-control" id="departmentLocation" [(ngModel)]="department.departmentLocation"
+                     name="departmentLocation">
+            </div>
+  
+            <div class="form-group">
+              <label> Employee ID </label>
+              <input type="text" class="form-control" id="employeeId" [(ngModel)]="department.employeeId"
+                     name="employeeId">
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

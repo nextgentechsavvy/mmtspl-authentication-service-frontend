@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="card col-md-4 offset-md-3 offset-md-3">
+      <div class="row">
+        <h6 class="text-center"> Update Employee By ID</h6>
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Employee ID</b></label>
+              <input type="text" class="form-control" id="employeeId" [(ngModel)]="employee.employeeId"
+                     name="employeeId" readonly style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Employee Name</b></label>
+              <input type="text" class="form-control" id="employeeName" [(ngModel)]="employee.employeeName"
+                     name="employeeName" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Employee Salary</b></label>
+              <input type="text" class="form-control" id="employeeSalary" [(ngModel)]="employee.employeeSalary"
+                     name="employeeSalary" bg-color="lightgray" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Employee Age</b></label>
+              <input type="text" class="form-control" id="employeeAge" [(ngModel)]="employee.employeeAge"
+                     name="employeeAge" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Employee Designation</b></label>
+              <input type="text" class="form-control" id="employeeDesignation" [(ngModel)]="employee.employeeDesignation"
+                     name="employeeDesignation" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Employee Address</b></label>
+              <input type="text" class="form-control" id="employeeAddress" [(ngModel)]="employee.employeeAddress"
+                     name="employeeAddress" style="height:20px;font-size:10pt;">
+            </div>
+
+            <br />
+            <button class="btn btn-success" type="submit" style="font-size:14px;">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

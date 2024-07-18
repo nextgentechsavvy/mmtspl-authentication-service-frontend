@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Delete User Search </h3>
+        <hr />
+
+<div class="card-body">
+         <!--  <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> ID </label>
+              <input type="text" class="form-control" id="userId" [(ngModel)]="user.userId"
+                     name="userId">
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form> -->
+
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By ID</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="userIdVal" [(ngModel)]="userIdVal" 
+                name="userIdVal" >
+              </td>
+              <td>
+                <button (click) = "deleteUserSearchById(userIdVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By Name</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="userNameVal" [(ngModel)]="userNameVal"  
+                name="userNameVal">
+              </td>
+              <td>
+                <button (click) = "deleteUserSearchByName(userNameVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <h2> User Details By Name</h2>
+  </div>
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th> User ID</th>
+      <th> User Name</th>
+      <th> User Username </th>
+      <th> User Password </th>
+      <th> User EMail </th>
+      <th> User Address </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let user of users" >
+      <td> {{ user?.userId! }} </td>
+      <td> {{ user?.userName! }} </td>
+      <td> {{ user?.userUsername! }} </td>
+      <td> {{ user?.userPassword! }} </td>
+      <td> {{ user?.userEmail! }} </td>
+      <td> {{ user?.userAddress! }} </td>
+      <td>
+        <button (click) = "deleteUserById(user?.userId!)" class = "btn btn-primary"> Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>

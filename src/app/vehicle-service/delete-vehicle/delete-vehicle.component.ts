@@ -1,0 +1,91 @@
+import { Component, OnInit } from '@angular/core';
+import { VehicleService } from '../vehicle.service';
+import { Vehicle } from '../vehicle';
+import { ActivatedRoute, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-delete-vehicle',
+  templateUrl: './delete-vehicle.component.html',
+  styleUrls: ['./delete-vehicle.component.css']
+})
+
+
+export class DeleteVehicleComponent {
+
+  vehicleId: number=0;
+  vehicleType: String='';
+  vehicle: Vehicle = new Vehicle();
+
+  vehicleTypeVal: String = "";
+  vehicleIdVal: number = 0;
+
+  //vehicles: Vehicle[] | undefined;
+   vehicles: Array<Vehicle> = [];
+
+  constructor(private vehicleService: VehicleService,
+              private route: ActivatedRoute,
+              private router: Router) { }
+
+  ngOnInit(): void {
+      this.vehicleIdVal = this.route.snapshot.params['vehicleIdVal'];
+      this.vehicleTypeVal = this.route.snapshot.params['vehicleTypeVal'];
+
+      if(this.vehicleIdVal != null){
+          this.vehicleService.getVehicleById(this.vehicleIdVal).subscribe(data => {
+            this.vehicle = data;
+            this.vehicles.push(this.vehicle);
+          }, error => console.log(error)); 
+        //this.vehicleIdVal = 0;
+
+      }else{
+        //this.vehicle = new Vehicle();
+        this.vehicleService.getVehicleByType(this.vehicleTypeVal).subscribe( data => {
+          this.vehicles = data;
+        }, error => console.log(error)); 
+      }
+      //this.router.navigate(['delete-vehicle']);
+  }
+
+/*   onSubmit(){
+    //this.deleteVehicleSearchById(this.vehicle.vehicleId);
+     this.vehicleService.getVehicleById(this.vehicle.vehicleId).subscribe( data =>{
+        //this.goToVehicleList();
+        this.deleteVehicleSearchById(this.vehicle.vehicleId);
+      }
+      , error => console.log(error)); 
+  }
+ */
+ /*  goToVehicleList(){
+    this.router.navigate(['/vehicles']);
+  } */
+
+
+ /*  deleteVehicleSearchByIdRefresh(){
+    this.router.navigate(['delete-employe']);
+  } */
+
+  deleteVehicleSearchById(vehicleIdVal: number){
+    this.router.navigate(['delete-vehicle-search-id', vehicleIdVal]);
+    //this.deleteVehicleSearchByIdRefresh();
+  }
+
+
+  deleteVehicleSearchByType(vehicleTypeVal: String){
+    //this.router.navigate(['vehicle-details-name', vehicleType]);
+     this.router.navigate(['delete-vehicle-search-name', vehicleTypeVal]);
+  }
+
+  /* deleteVehicleById(vehicleIdVal: number){
+    this.router.navigate(['delete-vehicle-id', vehicleIdVal]);
+  } */
+
+  deleteVehicleById(vehicleId: number){
+    this.vehicleService.deleteVehicleById(vehicleId).subscribe( data => {
+      console.log(data);
+      //this.getVehicles();
+      this.router.navigate(['delete-vehicle']);
+    })
+  }
+  
+}
+

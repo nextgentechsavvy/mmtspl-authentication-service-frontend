@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Delete Trip Search </h3>
+        <hr />
+
+<div class="card-body">
+         <!--  <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> ID </label>
+              <input type="text" class="form-control" id="tripId" [(ngModel)]="trip.tripId"
+                     name="tripId">
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form> -->
+
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By ID</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="tripIdVal" [(ngModel)]="tripIdVal" 
+                name="tripIdVal" >
+              </td>
+              <td>
+                <button (click) = "deleteTripSearchById(tripIdVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By Type</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="tripTypeVal" [(ngModel)]="tripTypeVal"  
+                name="tripTypeVal">
+              </td>
+              <td>
+                <button (click) = "deleteTripSearchByType(tripTypeVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <h2> Trip Details By Type</h2>
+  </div>
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th> ID</th>
+      <th> Type</th>
+      <th> Source Localion </th>
+      <th> Destination Localion </th>
+      <th> Trip Distance </th>
+      <th> Vehicle ID </th>
+      <th> Vehicle Type</th>
+      <th> Trip Duration</th>
+      <th> Journey Package Type</th>
+      <th> Journey Type</th>
+      <th> Journey When</th>
+      <th> Journey Depart Day</th>
+      <th> Journey Depart Time</th>
+      <th> Journey Return Day</th>
+      <th> Journey Return Time</th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let trip of trips" >
+      <td style="width:5%"> {{ trip?.tripId! }} </td>
+      <td style="width:20%"> {{ trip?.tripType! }} </td>
+      <td style="width:10%"> {{ trip?.sourceLocalion! }} </td>
+      <td style="width:5%"> {{ trip?.destinationLocalion! }} </td>
+      <td style="width:10%"> {{ trip?.tripDistance! }} </td>
+      <td style="width:20%"> {{ trip?.vehicleId! }} </td>
+      <td style="width:20%"> {{ trip?.vehicleType! }} </td>
+      <td style="width:20%"> {{ trip?.tripDuration! }} </td>
+      <td style="width:20%"> {{ trip?.journeyPackageType! }} </td>
+      <td style="width:20%"> {{ trip?.journeyType! }} </td>
+      <td style="width:20%"> {{ trip?.journeyWhen! }} </td>
+      <td style="width:20%"> {{ trip?.journeyDepartDay! }} </td>
+      <td style="width:20%"> {{ trip?.journeyDepartTime! }} </td>
+      <td style="width:20%"> {{ trip?.journeyReturnDay! }} </td>
+      <td style="width:20%"> {{ trip?.journeyReturnTime! }} </td>
+      <td style="width:30%">
+        <button (click) = "deleteTripById(trip?.tripId!)" class = "btn btn-primary"> Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  

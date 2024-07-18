@@ -1,0 +1,30 @@
+<div class = "row">
+    <h2> Product Details By Name</h2>
+  </div>
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th> Product ID</th>
+      <th> Product Name</th>
+      <th> Product Category </th>
+      <th> Product Price </th>
+      <th> Product Model </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+   <tr *ngFor = "let product of products" >
+      <td> {{ product?.productId! }} </td>
+      <td> {{ product?.productName! }} </td>
+      <td> {{ product?.productCategory! }} </td>
+      <td> {{ product?.productPrice! }} </td>
+      <td> {{ product?.productModel! }} </td>
+      <td>
+        <button (click) = "updateProductById(product?.productId!)" class = "btn btn-primary"> Update</button>
+        <button (click) = "deleteProductById(product?.productId!)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+        <!--<button (click) = "productDetails(product?.productId!)" class = "btn btn-primary" style="margin-left: 10px"> View</button>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="card col-md-4 offset-md-3 offset-md-3">
+      <div class="row">
+        <h6 class="text-center"> Create LoginUser </h6>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Enter Login User Name</b></label>
+              <input type="text" class="form-control" id="userName" [(ngModel)]="loginUserAuthMasters.userName"
+                     name="userName" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Enter Login User UserName</b></label>
+              <input type="text" class="form-control" id="userUsername" [(ngModel)]="loginUserAuthMasters.userUsername"
+                     name="userUsername" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Enter Login User Password</b></label>
+            <input type="password" class="form-control" id="userPassword" [(ngModel)]="loginUserAuthMasters.userPassword"
+                     name="userPassword" style="height:20px;font-size:10pt;">
+            </div>
+            <div class="form-group" style="font-size:10pt;">
+              <label><b>Enter Login User Email</b></label>
+            <input type="text" class="form-control" id="userEmail" [(ngModel)]="loginUserAuthMasters.userEmail"
+                     name="userEmail" style="height:20px;font-size:10pt;">
+            </div>
+            <br />
+            <button class="btn btn-success" type="submit"  style="font-size:14px;position: relative;">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

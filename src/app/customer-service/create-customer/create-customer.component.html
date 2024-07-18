@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Create Customer </h3>
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label>Customer Name</label>
+              <input type="text" class="form-control" id="customerName" [(ngModel)]="customer.customerName"
+                     name="customerName">
+            </div>
+  
+            <div class="form-group">
+              <label> Customer Username</label>
+              <input type="text" class="form-control" id="customerUsername" [(ngModel)]="customer.customerUsername"
+                     name="customerUsername">
+            </div>
+  
+            <div class="form-group">
+              <label> Customer Password </label>
+              <input type="text" class="form-control" id="customerPassword" [(ngModel)]="customer.customerPassword"
+                     name="customerPassword">
+            </div>
+  
+            <div class="form-group">
+              <label> Customer Email </label>
+              <input type="text" class="form-control" id="customerEmail" [(ngModel)]="customer.customerEmail"
+                     name="customerEmail">
+            </div>
+            <div class="form-group">
+              <label> Customer Address </label>
+              <input type="text" class="form-control" id="customerAddress" [(ngModel)]="customer.customerAddress"
+                     name="customerAddress">
+            </div>
+
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

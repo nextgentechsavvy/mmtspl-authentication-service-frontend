@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Update Trip By ID</h3>
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> <b><b>Trip ID </b> </b></label>
+              <input type="text" class="form-control" id="tripId" [(ngModel)]="trip.tripId"
+                     name="tripId" readonly >
+            </div>
+
+            <div class="form-group">
+              <label> <b>Type </b></label>
+              <input type="text" class="form-control" id="tripType" [(ngModel)]="trip.tripType"
+                     name="tripType">
+            </div>
+  
+              <div class="form-group">
+              <label> <b>Source Localion</b> </label>
+              <input type="text" class="form-control" id="sourceLocalion" [(ngModel)]="trip.sourceLocalion"
+                     name="sourceLocalion">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Destination Localion</b> </label>
+              <input type="text" class="form-control" id="destinationLocalion" [(ngModel)]="trip.destinationLocalion"
+                     name="destinationLocalion">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Trip Distance</b> </label>
+              <input type="text" class="form-control" id="tripDistance" [(ngModel)]="trip.tripDistance"
+                     name="tripDistance">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Vehicle ID</b> </label>
+              <input type="text" class="form-control" id="vehicleId" [(ngModel)]="trip.vehicleId"
+                     name="vehicleId">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Vehicle Type</b> </label>
+              <input type="text" class="form-control" id="vehicleType" [(ngModel)]="trip.vehicleType"
+                     name="vehicleType">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Trip Duration</b> </label>
+              <input type="text" class="form-control" id="tripDuration" [(ngModel)]="trip.tripDuration"
+                     name="tripDuration">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Journey Package Type</b> </label>
+              <input type="text" class="form-control" id="journeyPackageType" [(ngModel)]="trip.journeyPackageType"
+                     name="journeyPackageType">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Journey Type</b> </label>
+              <input type="text" class="form-control" id="journeyType" [(ngModel)]="trip.journeyType"
+                     name="journeyType">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Journey When</b> </label>
+              <input type="text" class="form-control" id="journeyWhen" [(ngModel)]="trip.journeyWhen"
+                     name="journeyWhen">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Journey Depart Day</b> </label>
+              <input type="text" class="form-control" id="journeyDepartDay" [(ngModel)]="trip.journeyDepartDay"
+                     name="journeyDepartDay">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Journey Depart Time</b> </label>
+              <input type="text" class="form-control" id="journeyDepartTime" [(ngModel)]="trip.journeyDepartTime"
+                     name="journeyDepartTime">
+            </div>
+
+            <div class="form-group">
+              <label> <b>Journey Return Day</b> </label>
+              <input type="text" class="form-control" id="journeyReturnDay" [(ngModel)]="trip.journeyReturnDay"
+                     name="journeyReturnDay">
+            </div>
+  
+            <div class="form-group">
+              <label> <b>Journey Return Time</b> </label>
+              <input type="text" class="form-control" id="journeyReturnTime" [(ngModel)]="trip.journeyReturnTime"
+                     name="journeyReturnTime">
+            </div>
+
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,38 @@
+<div class = "row">
+    <h6> Employee List</h6>
+  </div>
+  
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr style=font-size:12px>
+      <th> ID</th>
+      <th> Name</th>
+      <th> Salary </th>
+      <th> Age </th>
+      <th> Designation </th>
+      <th> Address </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+   <tr *ngFor = "let employee of employees" style="font-size:12px;">
+      <td style="width:5%"> {{ employee?.employeeId! }} </td>
+      <td style="width:20%">  {{ employee?.employeeName! }} </td>
+      <td style="width:10%"> {{ employee?.employeeSalary! }} </td>
+      <td style="width:5%"> {{ employee?.employeeAge! }} </td>
+      <td style="width:10%"> {{ employee?.employeeDesignation! }} </td>
+      <td style="width:15%"> {{ employee?.employeeAddress! }} </td>
+     <td style="width:30%">
+        <button (click) = "updateEmployeeById(employee?.employeeId!)"  class = "btn btn-primary" style=font-size:12px> Update</button>
+        <button (click) = "deleteEmployeeById(employee?.employeeId!)" class = "btn btn-danger" style="margin-left: 5px; font-size:12px"> Delete</button>
+      </td>
+    </tr>
+   </tbody>
+  </table>
+  <table class = "table table-striped table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <div>

@@ -1,0 +1,90 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 30px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+}
+
+.header {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 30px;
+    background-color: blue;
+    text-align: left;
+    color: white;
+}
+
+input:read-only {
+  background-color: lightgray;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+/* input:read-only :focus {
+  background-color: lightgray;
+  font-weight: bold;
+  user-select: none;
+} */
+
+/* input[type=text]:focus {
+  background-color: lightblue;
+} */
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: blue;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: blue}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: blue;
+}
+
+
+

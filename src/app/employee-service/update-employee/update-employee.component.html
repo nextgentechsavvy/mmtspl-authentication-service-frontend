@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h6 class="text-center"> Update Employee Search </h6>
+        <hr />
+
+<div class="card-body">
+         <!--  <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> ID </label>
+              <input type="text" class="form-control" id="employeeId" [(ngModel)]="employee.employeeId"
+                     name="employeeId">
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form> -->
+
+        <div class="card-body">
+            <tr>
+              <td  style="font-size:14px;">
+                <label>Search By ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="employeeIdVal" [(ngModel)]="employeeIdVal" 
+                name="employeeIdVal" style="height:30px;font-size:12pt;">
+              </td>
+              <td>
+                <button (click) = "updateEmployeeSearchById(employeeIdVal)" class = "btn btn-primary"  style="font-size:12px; margin-left: 20px;"> Search </button>
+              </td>
+            </tr>
+        </div>
+        <div class="card-body">
+            <tr>
+              <td  style="font-size:14px;">
+                <label>Search By Name&nbsp;</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="employeeNameVal" [(ngModel)]="employeeNameVal"  
+                name="employeeNameVal" style="height:30px;font-size:12pt;">
+              </td>
+              <td>
+                <button (click) = "updateEmployeeSearchByName(employeeNameVal)" class = "btn btn-primary"  style="font-size:12px; margin-left: 20px;"> Search </button>
+              </td>
+            </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class = "row">
+    <h6> Employee List</h6>
+  </div>
+  
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr style=font-size:12px>
+      <th> ID</th>
+      <th> Name</th>
+      <th> Salary </th>
+      <th> Age </th>
+      <th> Designation </th>
+      <th> Address </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let employee of employees"  style="font-size:12px;">
+      <td style="width:5%"> {{ employee?.employeeId! }} </td>
+      <td style="width:20%">  {{ employee?.employeeName! }} </td>
+      <td style="width:10%"> {{ employee?.employeeSalary! }} </td>
+      <td style="width:5%"> {{ employee?.employeeAge! }} </td>
+      <td style="width:10%"> {{ employee?.employeeDesignation! }} </td>
+      <td style="width:15%"> {{ employee?.employeeAddress! }} </td>
+     <td style="width:20%">
+        <button (click) = "updateEmployeeById(employee?.employeeId!)" class = "btn btn-primary" style=font-size:12px> Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  

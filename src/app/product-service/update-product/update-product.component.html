@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <h3 class="text-center"> Update Producte Search </h3>
+        <hr />
+
+<div class="card-body">
+         <!--  <form (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label> ID </label>
+              <input type="text" class="form-control" id="productId" [(ngModel)]="product.productId"
+                     name="productId">
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit">Submit</button>
+  
+          </form> -->
+
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By ID</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="productIdVal" [(ngModel)]="productIdVal" 
+                name="productIdVal" >
+              </td>
+              <td>
+                <button (click) = "updateProductSearchById(productIdVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+        <div class="card-body">
+            <tr>
+              <td>
+                <label>Search By Name</label>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="productNameVal" [(ngModel)]="productNameVal"  
+                name="productNameVal">
+              </td>
+              <td>
+                <button (click) = "updateProductSearchByName(productNameVal)" class = "btn btn-primary"> Search </button>
+              </td>
+            </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <h2> Producte Details By Name</h2>
+  </div>
+  <table class = "table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th> Product ID</th>
+      <th> Product Name</th>
+      <th> Product Category </th>
+      <th> Product Price </th>
+      <th> Product Model </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let product of products" >
+      <td> {{ product?.productId! }} </td>
+      <td> {{ product?.productName! }} </td>
+      <td> {{ product?.productCategory! }} </td>
+      <td> {{ product?.productPrice! }} </td>
+      <td> {{ product?.productModel! }} </td>
+      <td>
+        <button (click) = "updateProductById(product?.productId!)" class = "btn btn-primary"> Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  
