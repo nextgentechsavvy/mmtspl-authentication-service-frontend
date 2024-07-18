@@ -25,7 +25,8 @@ export class EmployeeService {
   //private employee_service_baseUrl = "http://192.168.1.4:9000/restapiemployeeservices/";
   
   //MMTSPL Service call Zull API Gateway
-  private employee_service_baseUrl = "http://localhost:8765/mmtspl-employee-service/restapiemployeeservices/";
+  //private employee_service_baseUrl = "http://localhost:8765/mmtspl-employee-service/restapiemployeeservices/";
+  private employee_service_baseUrl = "http://192.168.223.13:30900/restapiemployeeservices/";
 
   private employee_service_baseUrlgetAllEmployeeUrl = "getAllEmployee";
   private employee_service_baseUrlgetEmployeeByIdUrl = "getEmployeeById/";

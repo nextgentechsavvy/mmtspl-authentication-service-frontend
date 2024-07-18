@@ -22,7 +22,8 @@ export class AddressService {
   //private address_service_baseUrl = "http://192.168.1.4:9002/restapiaddressservices/";
   
   //MMTSPL Service call Zull API Gateway
-  private address_service_baseUrl = "http://localhost:8765/mmtspl-address-service/restapiaddressservices/";
+  //private address_service_baseUrl = "http://localhost:8765/mmtspl-address-service/restapiaddressservices/";
+  private address_service_baseUrl = "http://192.168.223.13:30902/restapiaddressservices/";
 
 
   private address_rest_api_baseUrlgetAllAddressUrl = "getAllAddress";
