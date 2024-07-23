@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { EmployeeListComponent } from './employee-service/employee-list/employee-list.component';
+import { EmployeeCompleteDetailsListComponent } from './employee-service/employee-complete-details-list/employee-complete-details-list.component';
 import { CreateEmployeeComponent } from './employee-service/create-employee/create-employee.component';
 import { UpdateEmployeeComponent } from './employee-service/update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-service/employee-details/employee-details.component';
@@ -85,6 +86,7 @@ const routes: Routes = [
   {path: 'login-user-details/:loginId', component: LoginUserDetailsComponent},
                         
   {path: 'employees', component: EmployeeListComponent},
+  {path: 'employee-complete-details-list', component: EmployeeCompleteDetailsListComponent},
   {path: 'create-employee', component: CreateEmployeeComponent},
   //{path: '', redirectTo: 'employees', pathMatch: 'full'},
   {path: 'employee-details/:employeeId', component: EmployeeDetailsComponent},

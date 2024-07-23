@@ -5,4 +5,6 @@ export class Employee {
     employeeAge: string = '';
     employeeDesignation: string = '';
     employeeAddress: string = '';
+    //employeeDepartmentName: string = ''; 
+	//employeeDepartmentLocation: string = '';
 }

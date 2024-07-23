@@ -18,13 +18,17 @@ export class DepartmentService {
 	  
   private localHostAddress: any;
 
-  //private department_service_baseUrl = "http://192.168.1.5:9001/restapidepartmentservices/";
+
   //MMTSPL Service call REST API
-  //private department_service_baseUrl = "http://192.168.1.4:9001/restapidepartmentservices/";
+  private department_service_baseUrl = "http://192.168.35.13:9001/restapidepartmentservices/";
   
   //MMTSPL Service call Zull API Gateway
   //private department_service_baseUrl = "http://localhost:8765/mmtspl-department-service/restapidepartmentservices/";
-  private department_service_baseUrl = "http://192.168.223.13:30901/restapidepartmentservices/";
+  
+  //Docker-k8s Calling
+  //private department_service_baseUrl = "http://192.168.119.13:30901/restapidepartmentservices/";
+  
+  
 
 
   private department_service_baseUrlgetAllDepartmentUrl = "getAllDepartment";

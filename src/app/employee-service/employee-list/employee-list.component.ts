@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../employee'
-import { EmployeeService } from '../employee.service'
+import { Employee } from '../employee';
+import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
 //import { HostDetails } from '.../host-details';
 
@@ -38,6 +38,7 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
+  
   employeeDetails(employeeId: number){
     this.router.navigate(['employee-details', employeeId]);
   }

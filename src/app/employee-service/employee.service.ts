@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Employee } from './employee';
+import { EmployeeCompleteDetails } from './employee-complete-details';
 import { HostDetails } from '../host-details';
 
 
@@ -22,12 +23,16 @@ export class EmployeeService {
 
 
   //MMTSPL Service call REST API
-  //private employee_service_baseUrl = "http://192.168.1.4:9000/restapiemployeeservices/";
+  private employee_service_baseUrl = "http://192.168.35.13:9000/restapiemployeeservices/";
   
   //MMTSPL Service call Zull API Gateway
   //private employee_service_baseUrl = "http://localhost:8765/mmtspl-employee-service/restapiemployeeservices/";
-  private employee_service_baseUrl = "http://192.168.223.13:30900/restapiemployeeservices/";
+ 
+  //Docker-k8s Calling
+  //private employee_service_baseUrl = "http://192.168.223.13:30900/restapiemployeeservices/";
 
+
+  
   private employee_service_baseUrlgetAllEmployeeUrl = "getAllEmployee";
   private employee_service_baseUrlgetEmployeeByIdUrl = "getEmployeeById/";
   private employee_service_baseUrladdEmployeeUrl = "addEmployee/";
@@ -35,9 +40,9 @@ export class EmployeeService {
   private employee_service_baseUrlupdateEmployeeByIdUrl = "updateEmployeeById/";
   private employee_service_baseUrldeleteEmployeeUrl = "deleteEmployee/";
   private employee_service_baseUrlgetEmployeeByNameUrl = "getEmployeeByName/";
-
   
-
+  private employee_service_baseUrlgetEmployeeCompleteDetailsListUrl = "getEmployeeCompleteDetailsList";
+  
   
 
   constructor(private httpClient: HttpClient) { }
@@ -79,6 +84,15 @@ export class EmployeeService {
     return this.httpClient.get(`${this.employee_service_baseUrl + this.employee_service_baseUrldeleteEmployeeUrl} ${employeeId}`);
   }
 
+  
+  
+  getEmployeeCompleteDetailsList(): Observable<EmployeeCompleteDetails[]>{
+	  //return this.httpClient.get<EmployeeCompleteDetails[]>(`${this.employee_service_baseUrl + this.employee_service_baseUrlgetEmployeeCompleteDetailsListUrl}`);
+	  return this.httpClient.get<EmployeeCompleteDetails[]>("http://localhost:9000/restapiemployeeservices/getEmployeeCompleteDetailsList");
+  }
+  
+  
+  
   getLocalHostAddress(): Observable<HostDetails>{
     return this.httpClient.get<HostDetails>(`${this.cloud_config_db_service_baseUrl}`);
   }
